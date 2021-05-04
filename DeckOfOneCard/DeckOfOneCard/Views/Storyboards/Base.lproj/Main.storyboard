@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="18122" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="v3s-Dv-i9c">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="18093"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Card View Controller-->
+        <scene sceneID="yQY-Ki-l3X">
+            <objects>
+                <viewController id="v3s-Dv-i9c" customClass="CardViewController" customModule="DeckOfOneCard" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="OX0-kF-2mG">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="center" spacing="25" translatesAutoresizingMaskIntoConstraints="NO" id="RW4-hv-wXM">
+                                <rect key="frame" x="16" y="119" width="382" height="450"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="(card of suit)" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="NSB-Vw-Kzi">
+                                        <rect key="frame" x="142.5" y="0.0" width="97.5" height="20.5"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="EGQ-8k-KpI">
+                                        <rect key="frame" x="85" y="45.5" width="212" height="349.5"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" secondItem="EGQ-8k-KpI" secondAttribute="height" multiplier="1:1.65" id="MYM-E8-1SR"/>
+                                        </constraints>
+                                    </imageView>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="AsL-2o-jbF">
+                                        <rect key="frame" x="155" y="420" width="72" height="30"/>
+                                        <state key="normal" title="Draw Card"/>
+                                        <connections>
+                                            <action selector="drawCardButtonTapped:" destination="v3s-Dv-i9c" eventType="touchUpInside" id="Yuy-En-uG1"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="450" id="l4h-jQ-sVC"/>
+                                </constraints>
+                            </stackView>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="8Nx-zL-v5x"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="RW4-hv-wXM" firstAttribute="top" secondItem="8Nx-zL-v5x" secondAttribute="top" constant="75" id="LYJ-VY-Eug"/>
+                            <constraint firstItem="8Nx-zL-v5x" firstAttribute="trailing" secondItem="RW4-hv-wXM" secondAttribute="trailing" constant="16" id="P5v-FE-eHN"/>
+                            <constraint firstItem="RW4-hv-wXM" firstAttribute="leading" secondItem="8Nx-zL-v5x" secondAttribute="leading" constant="16" id="cUR-5a-q1N"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="cardImageView" destination="EGQ-8k-KpI" id="Qax-zH-Uuh"/>
+                        <outlet property="cardSuitLabel" destination="NSB-Vw-Kzi" id="oAR-Vp-7eb"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="d7K-VE-eQb" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-233.33333333333334" y="50.892857142857139"/>
+        </scene>
+    </scenes>
+    <resources>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
+</document>
